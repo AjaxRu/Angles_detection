@@ -22,7 +22,7 @@
 `docker-compose exec web coverage report` <br/><br/>
 ![image](https://github.com/user-attachments/assets/09806172-24b7-44c2-8363-d707907350bf) <br/>
 ## РАБОТА С КОЛЛЕКЦИЕЙ В POSTMAN
-### Выполните
+Выполните если необходимо
 `docker-compose exec web python manage.py migrate` <br/>
 ### Создайте суперпользователя <br/>
 `docker-compose exec web python manage.py createsuperuser` <br/>
