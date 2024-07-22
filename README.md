@@ -24,7 +24,7 @@
 ## РАБОТА С КОЛЛЕКЦИЕЙ В POSTMAN
 ### Выполните
 `docker-compose exec web python manage.py migrate` <br/>
-Создайте суперпользователя <br/>
+### Создайте суперпользователя <br/>
 `docker-compose exec web python manage.py createsuperuser` <br/>
 ### Откройте коллекцию angle_detection.postman_collection.json в Postman
 Для получения токена используйте запрос Token_obtain с введенными данными суперпользователя <br/>
