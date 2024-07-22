@@ -1,15 +1,15 @@
 # angles_detection
 Клонируйте репозиторий себе в папку:
-git clone https://github.com/AjaxRu/angles_detection.git
-cd angles_detection
+`git clone https://github.com/AjaxRu/angles_detection.git`
+`cd angles_detection`
 
 ЗАПУСК
-docker-compose up --build
+`docker-compose up --build`
 
 ТЕСТЫ
 Для прохождения тестов откройте новое окно, перейдите в папку проекта и выполните:
 1. Литинг кода
-docker-compose exec web flake8 .
+`docker-compose exec web flake8 .`
 ![image](https://github.com/user-attachments/assets/0a11c1de-5c78-4d8e-b29b-4e703c4795cf)
 
 2. Анализ кода с помощью radon
