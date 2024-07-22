@@ -29,7 +29,7 @@
 ### Откройте коллекцию angle_detection.postman_collection.json в Postman
 Для получения токена используйте запрос Token_obtain с введенными данными суперпользователя <br/>
 ![image](https://github.com/user-attachments/assets/f77abef2-9113-4f83-a18c-a968fb16db37) <br/>
-Для обновления токена используйте запрос Token Refresh и введите "refresh" из предыдущего запроса <br/>
+Для обновления токена используйте запрос Token Refresh и введите "refresh" из предыдущего запроса <br/><br/>
 Для получения точек интереса с изображения используйте запрос Image Detection, в окне авторизации вставьте "access" из запроса по получению токена, и вставьте в "image" желаемое изображение, например test_image.jpg <br/>
 ![image](https://github.com/user-attachments/assets/16bafcdf-48f3-450b-8a14-798d7256419b) <br/>
 Пример найденных точек интереса, отмеченных на оригинальном изображении: <br/>
