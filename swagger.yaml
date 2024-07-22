@@ -1,0 +1,113 @@
+openapi: 3.0.0
+info:
+  title: Angles Detection API
+  version: '1.0'
+  description: API for detecting angles in images
+  contact:
+    email: contact@angles.local
+  license:
+    name: BSD License
+    url: https://opensource.org/licenses/BSD-3-Clause
+servers:
+  - url: http://localhost:8000
+paths:
+  /api/token/:
+    post:
+      summary: Obtain JWT token
+      description: Obtain JWT token by providing username and password.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+              required:
+                - username
+                - password
+      responses:
+        '200':
+          description: Successfully obtained token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access:
+                    type: string
+                  refresh:
+                    type: string
+        '400':
+          description: Bad request
+  /api/token/refresh/:
+    post:
+      summary: Refresh JWT token
+      description: Refresh JWT token by providing the refresh token.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                refresh:
+                  type: string
+              required:
+                - refresh
+      responses:
+        '200':
+          description: Successfully refreshed token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access:
+                    type: string
+        '400':
+          description: Bad request
+  /api/detection/detect/:
+    post:
+      summary: Detect angles in image
+      description: Upload an image to detect angles.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                image:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: Successfully detected angles
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  points:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        x:
+                          type: integer
+                        y:
+                          type: integer
+        '400':
+          description: Bad request
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
