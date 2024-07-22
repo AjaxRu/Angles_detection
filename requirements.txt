@@ -1,0 +1,12 @@
+Django>=3.2,<4.0
+djangorestframework
+drf-yasg
+Pillow
+djangorestframework-simplejwt
+gunicorn
+numpy
+opencv-python
+flake8
+radon
+bandit
+coverage
