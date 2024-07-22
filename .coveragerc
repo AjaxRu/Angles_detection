@@ -1,0 +1,11 @@
+[run]
+branch = True
+source =
+    angles_detection
+    detection
+
+[report]
+show_missing = True
+omit =
+    config.py
+    config-3.py
