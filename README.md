@@ -39,5 +39,8 @@ docker-compose exec web python manage.py createsuperuser
 Для обновления токена используйте запрос Token Refresh и введите "refresh" из предыдущего запроса
 Для получения точек интереса с изображения используйте запрос Image Detection, в окне авторизации вставьте "access" из запроса по получению токена, и вставьте в "image" желаемое изображение, например test_image.jpg
 ![image](https://github.com/user-attachments/assets/16bafcdf-48f3-450b-8a14-798d7256419b)
+Пример найденных точек интереса, отмеченных на оригинальном изображении:
+![image](https://github.com/user-attachments/assets/5b668e22-7e1c-484c-a8c5-86d753e02c6b)
+
 
 
